@@ -1,3 +1,5 @@
+#Nelson Hsiao 1-16-17
+#hsiaon-hw3
 # test_babyset.py
 import unittest
 
@@ -26,13 +28,17 @@ class TestBabySetMethods(unittest.TestCase):
     def test_get(self):
     	bset = BabySet([2, 4, 4])
         with self.assertRaises(KeyError):
-            bset.get(3)
+        	bset.get(3)
 
     def test_remove(self):
-        pass
-
+		bset = BabySet([2, 4, 4])
+		bset.remove(4)
+		self.assertEqual(bset.size(), 1)
+	
     def test_clear(self):
-    	pass
+		bset = BabySet([2, 4, 4])
+		bset.clear()
+		self.assertEqual(bset.size(), 0)
 
 if __name__ == '__main__':
     unittest.main()
