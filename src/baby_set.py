@@ -42,7 +42,7 @@ class BabySet:
 			self.__data.remove(elem)
 		
 		except ValueError:
-			return self.__data()
+			raise KeyError
 
 	def get(self, elem):
 		"""Returns element elem from the set. 
